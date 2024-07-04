@@ -3,16 +3,16 @@
 function MainPage(){
     return(
         <body>
-            <main>
-                <div>
+            <main className="main-container">
+                <div className="content-container">
                     <h1></h1>
-                    <p></p>
-                    <ul className="features">
-                        <li className="features_item"></li>
-                        <li className="features_item"></li>
-                        <li className="features_item"></li>
+                    <p className="main-text"></p>
+                    <ul className="features main-text">
+                        <li className="features-item"></li>
+                        <li className="features-item"></li>
+                        <li className="features-item"></li>
                     </ul>
-                    <span></span>
+                    <span className="email"></span>
                     <input></input>
                     <button></button>
                 </div>
