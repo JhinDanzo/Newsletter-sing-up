@@ -8,6 +8,7 @@ $pale-navy: #36384D;
 $dark-navy: #242742;
 $orange: #FF6A3A;
 $pomerange: #FF527B;
+$vermallion: #FF6155;
 $white: #FFFFFF;
 
 @mixin flexbox($direction, $justify-content, $align-items){
@@ -24,7 +25,7 @@ $white: #FFFFFF;
     color: $dark-navy;
 }
 
-body{
+.body{
     @include flexbox(row, center, center);
     height: 100vh;
     background-color: $pale-navy;
@@ -77,14 +78,26 @@ body{
 
 
             .input-form{
-                margin-bottom: 24px;
-
+                position: relative;
+                .error-message{
+                    @include main-font();
+                    position: absolute;
+                    right: 0;
+                    font-size: 12px;
+                    color: $vermallion;
+                }
                 .email{
                     @include main-font();
                     font-size: 12px;
                     left: 0;
                 }
-    
+                
+                .input-error{
+                    background-color: rgba(255, 97, 85, 0.15);
+                    color: $vermallion;
+                    font-family: Roboto Flex, serif;
+                }
+
                 .email-input{
                     margin-top: 8px;
                     width: 376px;
@@ -93,6 +106,7 @@ body{
                     border: 1px solid rgba(128, 128, 128, 0.25);
                     padding-left: 24px; 
                     padding-right: 24px;
+                    margin-bottom: 24px;
 
                     &:hover{
                         cursor: pointer;
