@@ -1,4 +1,4 @@
-
+import IllustrationDesktop from "../assets/illustration-sign-up-desktop.svg"
 
 function MainPage(){
     return(
@@ -16,7 +16,7 @@ function MainPage(){
                     <input></input>
                     <button></button>
                 </div>
-                <img/>
+                <img alt="main_image" className="main_image" src={IllustrationDesktop} />
             </main>
 
         </body>
