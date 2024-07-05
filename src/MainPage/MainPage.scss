@@ -1,0 +1,107 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$pale-navy: #36384D;
+$dark-navy: #242742;
+$orange: #FF6A3A;
+$pomerange: #FF527B;
+$white: #FFFFFF;
+
+@mixin flexbox($direction, $justify-content, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+
+@mixin main-font(){
+    font-size: 16px;
+    line-height: 150%;
+    font-family: Roboto, serif;
+    color: $dark-navy;
+}
+
+body{
+    @include flexbox(row, center, center);
+    height: 100vh;
+    background-color: $pale-navy;
+    
+
+    main{
+        @include flexbox(row, center, center);
+        height: 641px;
+        width: 928px;
+        border-radius: 36px;
+        background-color: $white;
+        padding: 24px 24px 24px 64px;
+        gap: 64px;
+        
+        .content-container{
+            @include flexbox(column, none, center);
+            width: 376px;
+            height: 446px;
+
+            .title{
+                @include main-font();
+                font-size: 56px;
+                font-weight: bold;
+                line-height: 100%;
+                margin-bottom: 24px;
+            }
+
+            .main-text{
+                @include main-font();
+                margin-bottom: 24px;
+            }
+
+            .features{
+                margin-bottom: 40px;
+            }
+
+            .input-form{
+                margin-bottom: 24px;
+
+                .email{
+                    @include main-font();
+                    font-size: 12px;
+                    left: 0;
+                }
+    
+                .email-input{
+                    margin-top: 8px;
+                    width: 376px;
+                    height: 56px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(128, 128, 128, 0.25);
+                    padding-left: 24px; 
+                    padding-right: 24px;
+                }
+            }
+
+            .submit-button{
+                @include main-font();
+                font-weight: bold;
+                color: $white;
+                width: 376px;
+                height: 56px;
+                border-radius: 8px;
+                border: none;
+                background-color: $dark-navy;
+
+                &:hover{
+                    background-image: linear-gradient($orange, $pomerange);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .main-image{
+            width: 400px;
+            height: 593px;
+        }
+    }
+}
+
