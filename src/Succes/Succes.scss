@@ -1,0 +1,51 @@
+@use "../MainPage/MainPage.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sucess-container{
+    @include MainPage.main-font();
+    height: 504px;
+    width: 520px;
+    border-radius: 36px;
+    background-color: MainPage.$white;
+    padding: 48px 64px 64px 64px;
+    
+    .check-mark{
+        margin-bottom: 32px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .title{
+        margin-bottom: 24px;
+        font-size: 56px;
+        line-height: 100%;
+    }
+
+    .main-text{
+        margin-bottom: 40px;
+    }
+
+    .exit-button{
+        width: 376px;
+        height: 56px;
+        border-radius: 8px;
+        border: none;
+        background-color: MainPage.$dark-navy;
+        color: MainPage.$white;
+
+            &:hover{
+                background-image: linear-gradient(MainPage.$orange, MainPage.$pomerange);
+                cursor: pointer;
+            }
+    }
+}
+
+
+

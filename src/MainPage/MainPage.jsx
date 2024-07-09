@@ -1,11 +1,13 @@
 import IllustrationDesktop from "../assets/illustration-sign-up-desktop.svg"
 import "./MainPage.scss"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function MainPage(){
 
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -19,7 +21,7 @@ function MainPage(){
             setError('Valid email required');
           } else {
             setError('');
-            console.log('email valid:', email);
+            navigate("/success");
           }
     }
 
