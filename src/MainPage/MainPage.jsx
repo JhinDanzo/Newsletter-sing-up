@@ -21,7 +21,7 @@ function MainPage(){
             setError('Valid email required');
           } else {
             setError('');
-            navigate("/success");
+            navigate("/success", {state: {email}});
           }
     }
 
