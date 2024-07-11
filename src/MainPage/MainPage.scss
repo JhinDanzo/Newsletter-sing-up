@@ -37,7 +37,7 @@ $white: #FFFFFF;
     padding: 0;
 
     main{
-        @include flexbox(row, center, center);
+        @include flexbox(row, none, center);
         height: 641px;
         width: 928px;
         border-radius: 36px;
@@ -152,7 +152,8 @@ $white: #FFFFFF;
     .body{
 
         main{
-            @include flexbox(column, none, none);
+            display: flex;
+            flex-direction: column;
             width: 375px;
             height: 842px;
             border-radius: 0;

@@ -47,5 +47,27 @@
     }
 }
 
+@media only screen and (max-width: 600px){
+    .sucess-container{
+        width: 375px;
+        height: 812px;
+        padding: 149px 24px 40px 24px;
+
+        .title{
+            font-size: 40px;
+        }
+
+        .main-text{
+            margin-bottom: 263px;
+        }
+        
+        .exit-button{
+            width: 327px;
+        }
+    }
+
+    
+}
+
 
 
